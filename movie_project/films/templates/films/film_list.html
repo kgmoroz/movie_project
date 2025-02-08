@@ -12,10 +12,12 @@
         {% for film in films %}
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ film.title }}</h5>
-                        <p class="card-text"><strong>Описание:</strong> {{ film.description }}</p>
-                        <p class="card-text"><strong>Отзыв:</strong> {{ film.review }}</p>
+                        <div class="card-text flex-grow-1" style="max-height: 600px; overflow-y: auto;">
+                            <p><strong>Описание:</strong> {{ film.description }}</p>
+                            <p><strong>Отзыв:</strong> {{ film.review }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
